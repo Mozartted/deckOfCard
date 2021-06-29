@@ -51,10 +51,10 @@ function App() {
       <Row className="justify-content-center">
         <Col md={4} className="text-center">
           <Row>
-              <Button block className="mb-2" onClick={pickFiveRandomCards}>
+              <Button block className="mb-2 mx-2" onClick={pickFiveRandomCards}>
                 Pick 5 random cards <PenTool/>
               </Button>
-              <Button block variant="outline-primary" onClick={resetDeck}>
+              <Button block variant="outline-primary" className="mx-2" onClick={resetDeck}>
                 Reset the deck
               </Button>
             {/* <Col md={6}>
