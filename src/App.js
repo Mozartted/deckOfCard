@@ -5,8 +5,8 @@ import {importAll} from "./utils"
 import {Card} from "./components"
 import {PenTool} from "react-feather"
 
-
-const deck = importAll(require.context('./assets/deckOfCards', false, /\.(png|jpe?g|svg)$/));
+const logo = require("./assets/logo.png").default
+const deck = importAll(require.context('./assets/deckOfCards', false, /\.(png|jpe?g|svg)$/))
 const deckObjects = Object.values(deck)
 
 
@@ -44,15 +44,15 @@ function App() {
     <Container fluid>
       <Row className="justify-content-center">
         <Col md={5} className="text-center mt-4">
-          <h2>Deck of Cards</h2>
-          <p className="">Pick some random cards</p>
+          <h2>Deck of Cards</h2> <img src={logo} width="30"/>
+          <p className="">Pick random cards</p>
         </Col>
       </Row>
       <Row className="justify-content-center">
         <Col md={4} className="text-center">
           <Row>
               <Button block className="mb-2" onClick={pickFiveRandomCards}>
-                Pick 5 random cards
+                Pick 5 random cards <PenTool/>
               </Button>
               <Button block variant="outline-primary" onClick={resetDeck}>
                 Reset the deck
